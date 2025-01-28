@@ -24,6 +24,12 @@ struct GameView: View {
         .foregroundColor(.white)
         .navigationBarHidden(true)
         .environmentObject(viewModel)
+        .navigationDestination(isPresented: $viewModel.isGameOver) {
+            ScoreView(
+                viewModel: ScoreViewModel(
+                    correctGuesses: viewModel.correctGuesses,
+                    incorrectGuesses: viewModel.incorrectGuesses))
+        }
     }
 }
 

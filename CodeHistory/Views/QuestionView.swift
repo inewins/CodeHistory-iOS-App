@@ -35,15 +35,21 @@ struct QuestionView: View {
                                     answerIndex])
                         }
                     )
+                    .disabled(viewModel.guessWasMade)
                     .padding(5)
                 }
             }
             .padding(.vertical, 15.0)
             .background(GameColor.main)
             if viewModel.guessWasMade {
-                Button(action: { viewModel.displayNextScreen() }) {
-                    BottomTextView(str: "Next")
+                VStack {
+                    Button(action: {
+                        viewModel.displayNextScreen()
+                    }) {
+                        BottomTextView(str: "Next")
+                    }
                 }
+                .background(GameColor.main)
             }
         }
     }

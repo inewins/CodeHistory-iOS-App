@@ -48,7 +48,8 @@ struct Question: Hashable {
             ],
             correctAnswerIndex: 3),
         Question(
-            questionText: "What Percent of the world's population lives in the northen hemisphere?",
+            questionText:
+                "What Percent of the world's population lives in the northen hemisphere?",
             possibleAnswers: [
                 "60%",
                 "70%",

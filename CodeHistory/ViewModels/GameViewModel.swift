@@ -11,6 +11,7 @@ import SwiftUI
 class GameViewModel: ObservableObject {
 
     @Published private var game = Game()
+    @Published var isGameOver = false
 
     var currentQuestion: Question {
         game.currentQuestion
@@ -33,6 +34,7 @@ class GameViewModel: ObservableObject {
     }
     func displayNextScreen() {
         game.updateGameStatus()
+        checkIsGameOver()
     }
 
     func updatedColor() -> Color {
@@ -45,5 +47,17 @@ class GameViewModel: ObservableObject {
         } else {
             return GameColor.main
         }
+    }
+
+    func checkIsGameOver() {
+        isGameOver = game.isOver
+    }
+
+    var correctGuesses: Int {
+        game.guessCount.correct
+    }
+
+    var incorrectGuesses: Int {
+        game.guessCount.incorrect
     }
 }
