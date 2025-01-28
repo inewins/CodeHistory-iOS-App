@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ChoiceTextView: View {
     let choiceText: String
-    let accentColor = Color(red: 48 / 255, green: 105 / 255, blue: 240 / 255)
+    let backgroundColor = GameColor.accent
 
     var body: some View {
         HStack {
@@ -19,12 +19,12 @@ struct ChoiceTextView: View {
                     .font(.body)
                     .bold()
                     .multilineTextAlignment(.center)
-                    .frame(width: geomtry.size.width,height: 50)
-                    .overlay(
-                        Rectangle()
-                            .stroke(accentColor, lineWidth: 4))
+                    .frame(width: geomtry.size.width, height: 50)
+                    .buttonStyle(.borderedProminent)
+                    .background(backgroundColor)
             }
             .frame(height: 50)
+            .cornerRadius(8)
             Spacer()
         }
     }
