@@ -29,7 +29,7 @@ struct ScoreView: View {
                 NavigationLink(
                     destination: GameView(),
                     label: {
-                        BottomTextView(str: "Re-take Quiz")
+                        BottomTextView(str: "Re-take Quiz", textColor: .white, backgroungColor: GameColor.accent)
                     })
             }
             .foregroundColor(.white)

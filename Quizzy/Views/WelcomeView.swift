@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct WelcomeView: View {
+    @EnvironmentObject var viewModel: GameViewModel
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -27,7 +29,7 @@ struct WelcomeView: View {
                     NavigationLink(
                         destination: GameView(),
                         label: {
-                            BottomTextView(str: "Start!")
+                            BottomTextView(str: "Start!", textColor: .white, backgroungColor: GameColor.accent)
                         })
                 }
                 .foregroundColor(.white)

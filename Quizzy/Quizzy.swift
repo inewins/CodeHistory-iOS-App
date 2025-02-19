@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct CodeHistoryApp: App {
+struct QuizzyApp: App {
     var body: some Scene {
         WindowGroup {
             WelcomeView()

@@ -41,16 +41,30 @@ struct QuestionView: View {
             }
             .padding(.vertical, 15.0)
             .background(GameColor.main)
-            if viewModel.guessWasMade {
-                VStack {
-                    Button(action: {
-                        viewModel.displayNextScreen()
-                    }) {
-                        BottomTextView(str: "Next")
-                    }
+            VStack {
+                Button(action: {
+                    viewModel.displayNextScreen()
+                }) {
+                    BottomTextView(str: "Next", textColor: viewModel.guessWasMade ? .white : GameColor.main, backgroungColor: viewModel.guessWasMade ? GameColor.accent : GameColor.main)
                 }
-                .background(GameColor.main)
+                .disabled(!viewModel.guessWasMade)
+                .transaction { transaction in
+                    transaction.animation = nil
+                }
+                
             }
+            .background(GameColor.main)
+//            if viewModel.guessWasMade {
+//                VStack {
+//                    Button(action: {
+//                        viewModel.displayNextScreen()
+//                    }) {
+//                        BottomTextView(str: "Next")
+//                    }
+//                    
+//                }
+//                .background(GameColor.main)
+//            }
         }
     }
 }

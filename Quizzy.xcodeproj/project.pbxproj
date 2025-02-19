@@ -7,13 +7,26 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		5849C4D82D18D230006BF87E /* CodeHistory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeHistory.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5849C4D82D18D230006BF87E /* Quizzy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quizzy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		58D71F142D63F96700979B9D /* Exceptions for "Quizzy" folder in "Quizzy" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 5849C4D72D18D230006BF87E /* Quizzy */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		5849C4DA2D18D230006BF87E /* CodeHistory */ = {
+		5849C4DA2D18D230006BF87E /* Quizzy */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CodeHistory;
+			exceptions = (
+				58D71F142D63F96700979B9D /* Exceptions for "Quizzy" folder in "Quizzy" target */,
+			);
+			path = Quizzy;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,7 +45,7 @@
 		5849C4CF2D18D230006BF87E = {
 			isa = PBXGroup;
 			children = (
-				5849C4DA2D18D230006BF87E /* CodeHistory */,
+				5849C4DA2D18D230006BF87E /* Quizzy */,
 				5849C4D92D18D230006BF87E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -40,7 +53,7 @@
 		5849C4D92D18D230006BF87E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5849C4D82D18D230006BF87E /* CodeHistory.app */,
+				5849C4D82D18D230006BF87E /* Quizzy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,9 +61,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5849C4D72D18D230006BF87E /* CodeHistory */ = {
+		5849C4D72D18D230006BF87E /* Quizzy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5849C4E62D18D233006BF87E /* Build configuration list for PBXNativeTarget "CodeHistory" */;
+			buildConfigurationList = 5849C4E62D18D233006BF87E /* Build configuration list for PBXNativeTarget "Quizzy" */;
 			buildPhases = (
 				5849C4D42D18D230006BF87E /* Sources */,
 				5849C4D52D18D230006BF87E /* Frameworks */,
@@ -61,13 +74,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				5849C4DA2D18D230006BF87E /* CodeHistory */,
+				5849C4DA2D18D230006BF87E /* Quizzy */,
 			);
-			name = CodeHistory;
+			name = Quizzy;
 			packageProductDependencies = (
 			);
 			productName = CodeHistory;
-			productReference = 5849C4D82D18D230006BF87E /* CodeHistory.app */;
+			productReference = 5849C4D82D18D230006BF87E /* Quizzy.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -85,7 +98,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5849C4D32D18D230006BF87E /* Build configuration list for PBXProject "CodeHistory" */;
+			buildConfigurationList = 5849C4D32D18D230006BF87E /* Build configuration list for PBXProject "Quizzy" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -99,7 +112,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5849C4D72D18D230006BF87E /* CodeHistory */,
+				5849C4D72D18D230006BF87E /* Quizzy */,
 			);
 		};
 /* End PBXProject section */
@@ -249,12 +262,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Quizzy/Quizzy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CodeHistory/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Quizzy/Preview Content\"";
 				DEVELOPMENT_TEAM = T62K7U6LPR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Quizzy/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.trivia-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -264,8 +280,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Anh-Nguyen.CodeHistory";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Anh-Nguyen.Quizzy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -278,12 +294,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Quizzy/Quizzy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CodeHistory/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Quizzy/Preview Content\"";
 				DEVELOPMENT_TEAM = T62K7U6LPR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Quizzy/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.trivia-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -293,8 +312,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Anh-Nguyen.CodeHistory";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Anh-Nguyen.Quizzy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -305,7 +324,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5849C4D32D18D230006BF87E /* Build configuration list for PBXProject "CodeHistory" */ = {
+		5849C4D32D18D230006BF87E /* Build configuration list for PBXProject "Quizzy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5849C4E42D18D233006BF87E /* Debug */,
@@ -314,7 +333,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5849C4E62D18D233006BF87E /* Build configuration list for PBXNativeTarget "CodeHistory" */ = {
+		5849C4E62D18D233006BF87E /* Build configuration list for PBXNativeTarget "Quizzy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5849C4E72D18D233006BF87E /* Debug */,

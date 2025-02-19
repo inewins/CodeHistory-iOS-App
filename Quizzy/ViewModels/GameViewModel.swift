@@ -60,4 +60,8 @@ class GameViewModel: ObservableObject {
     var incorrectGuesses: Int {
         game.guessCount.incorrect
     }
+    
+    var nextTextColor: Color {
+        return guessWasMade ? .white : GameColor.accent
+    }
 }
